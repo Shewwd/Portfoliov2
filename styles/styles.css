@@ -7,6 +7,7 @@
 body {
     font-family: Verdana; 
     font-size: 18px;
+    user-select: none;
 }
 
 /* --------- HEADER --------- */
@@ -15,16 +16,35 @@ header {
     width: 100%;
     padding: 30px;
     background: #333333;
-    color: white;
 }
 
 header nav.nav-expanded {
     display: inline-flex;
     justify-content: space-between;
+    align-items: center;
+    color: lightgray;
+}
+
+header nav.nav-expanded a {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit
+}
+
+header nav.nav-expanded a:hover{
+    color: white;
 }
 
 header nav.nav-expanded :not(:first-child) {
-    padding-left: 20px;
+    margin-left: 20px;
+}
+
+/* --------- MAIN --------- */
+
+card {
+    
 }
 
 /* --------- MOBILE VIEW --------- */
