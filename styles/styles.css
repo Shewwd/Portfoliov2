@@ -20,7 +20,7 @@ body {
 
 header {
     width: 100%;
-    padding: 30px 90px;
+    padding: 30px 15%;
     background: #333;
 }
 
@@ -51,7 +51,7 @@ header nav.nav-expanded :not(:first-child) {
 /* --------- MAIN --------- */
 
 main {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -126,6 +126,9 @@ main {
 .project-card-list {
     display: inline-flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-card-item {
@@ -133,10 +136,15 @@ main {
     flex-direction: column;
     align-items: center;
     width: fit-content;
-    padding: 20px;
+    padding: 13px;
     border: 1px solid #333;
     border-radius: 13px;
     background: rgb(40, 40, 40);
+}
+
+.project-card-item button {
+    background: none;
+    border: none;
 }
 
 .project-card-item h3 {
