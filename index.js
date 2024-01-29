@@ -1,3 +1,17 @@
+function scrollToSection(section) {
+    const targetElement = document.getElementById(`${section}-card`);
+    const headerHeight = 80;
+    const targetPosition = targetElement.offsetTop - headerHeight;
+
+    window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+    });
+}
+
+
+/* --------- SlideShow --------- */
+
 let snakeGameCurrentSlide = 1;
 let snakeGameSlideCount = 3;
 

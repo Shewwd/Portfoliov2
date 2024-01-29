@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         <link rel="stylesheet" href="/styles/styles.css">
-        <script src="/functions/slideshow.js"></script>
+        <script src="/index.js"></script>
         <title>Jacob Shawd's Portfolio</title>
     </head>
     <body>
         <header>
             <nav class="nav-expanded">
-                <a href=""><h4>Technologies</h4></a>
-                <a href=""><h4>Work</h4></a>
-                <a href=""><h4>Projects</h4></a>
-                <a href=""><h4>Bio</h4></a>
-                <a href=""><h4>Contact</h4></a>
+                <a onclick="scrollToSection('bio')"><h4>Bio</h4></a>
+                <a onclick="scrollToSection('technologies')"><h4>Technologies</h4></a>
+                <a onclick="scrollToSection('work')"><h4>Work</h4></a>
+                <a onclick="scrollToSection('projects')"><h4>Projects</h4></a>
+                <a onclick=""><h4>Contact</h4></a>
                 <a href="https://github.com/Shewwd" target="_blank" rel="noopener noreferrer"><img src="/assets/svg/github-icon.svg" alt="GitHub icon" /></a>
                 <a href="https://www.linkedin.com/in/jacob-shawd-8575b7276/" target="_blank" rel="noopener noreferrer"><img src="/assets/svg/linkedin-icon.svg" alt="LinkedIn icon" /></a>
             </nav>
@@ -23,6 +23,14 @@
         <main>
             <div class="card">
                 <h1>Hello I'm Jake</h1>
+            </div>
+            <div id="bio-card" class="card">
+                <h2>Bio</h2>
+                <div class="bio-card-content">
+                    <p>I'm an aspiring computer science graduate with a passion for creating innovative and user-centric digital experiences. 
+                        I primarily work within .NET and React ecosystems, but my experience extends beyond these technologies. 
+                        Currently based in Sioux Falls, SD, I am on a journey to advance my career as a software engineer.</p>
+                </div>
             </div>
             <div id="technologies-card" class="card">
                 <h2>Technologies</h2>
@@ -99,10 +107,11 @@
                                 <img id="snake-game-image-3" class="hidden" height="200" width="200" src="./assets/images/snake-game-2.png" alt="Snake Game"/>
                                 <div class="slideshow-buttons">
                                     <button class="slideshow-button" onclick="changeSlide('snake-game', -1)">&#10094;</button>
-                                    <button class="slideshow-button" onclick="changeSlide('snake-game', 1)">&#10095;</butt>
+                                    <button class="slideshow-button" onclick="changeSlide('snake-game', 1)">&#10095;</button>
                                 </div>
                             </div>
-                            <p>I decided to create this game when I read that Bun 1.0 had been released. While I didn't have a specific purpose for it, my past experience with npm prompted me to explore the differences. This game is entirely built Vue, JS/TS, HTML, and CSS. It's just a whole bunch of divs tracked with a 2d array. Beyond that, it's a basic snake game where you navigate with the arrow keys, and when you collect food, the snake grows.</p>
+                            <p>I decided to create this game when I read that Bun 1.0 had been released. While I didn't have a specific purpose for it, my past experience with npm prompted me to explore the differences. 
+                                This game is entirely built Vue, JS/TS, HTML, and CSS. It's just a whole bunch of divs tracked with a 2d array. Beyond that, it's a basic snake game where you navigate with the arrow keys, and when you collect food, the snake grows.</p>
                         </div>
                         <div class="technology-row">
                             <p class="technology-item">JavaScript</p>
@@ -126,7 +135,8 @@
                                     <button class="slideshow-button" onclick="changeSlide('gym-project', 1)">&#10095;</butt>
                                 </div>
                             </div>
-                            <p>Gym Rat Lab was a school project done by me and 3 other classmates. It allows a user to complete workouts with exercises within. There are preset exercises and workout template a user can select or they can create their own.</p>
+                            <p>Gym Rat Lab was a school project done by me and 3 other classmates. It allows a user to complete workouts with exercises within. 
+                                There are preset exercises and workout template a user can select or they can create their own.</p>
                         </div>
                         <div class="technology-row">
                             <p class="technology-item">JavaScript</p>
