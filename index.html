@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         <link rel="stylesheet" href="/styles/styles.css">
-        <script src="/index.js"></script>
+        <script src="/functions/slideshow.js"></script>
         <title>Jacob Shawd's Portfolio</title>
     </head>
     <body>
@@ -64,12 +64,12 @@
                             <h3>Dakota State University, Computer Science</h3>
                             <p>2021 - 2024</p>
                         </div>
-                        <div class="work-row-technologies">
-                            <p class="work-row-technologies-item">C</p>
-                            <p class="work-row-technologies-item">C++</p>
-                            <p class="work-row-technologies-item">HTML</p>
-                            <p class="work-row-technologies-item">CSS</p>
-                            <p class="work-row-technologies-item">PHP</p>
+                        <div class="technology-row">
+                            <p class="technology-item">C</p>
+                            <p class="technology-item">C++</p>
+                            <p class="technology-item">HTML</p>
+                            <p class="technology-item">CSS</p>
+                            <p class="technology-item">PHP</p>
                         </div>
                     </div>
                     <div class="work-card-content-row">
@@ -77,12 +77,12 @@
                             <h3>Sandhills Global, Software Developer Intern</h3>
                             <p>2022 - Present</p>
                         </div>
-                        <div class="work-row-technologies">
-                            <p class="work-row-technologies-item">C#</p>
-                            <p class="work-row-technologies-item">VB.Net</p>
-                            <p class="work-row-technologies-item">JavaScript</p>
-                            <p class="work-row-technologies-item">TypeScript</p>
-                            <p class="work-row-technologies-item">React</p>
+                        <div class="technology-row">
+                            <p class="technology-item">C#</p>
+                            <p class="technology-item">VB.Net</p>
+                            <p class="technology-item">JavaScript</p>
+                            <p class="technology-item">TypeScript</p>
+                            <p class="technology-item">React</p>
                         </div>
                     </div>
                 </div>
@@ -91,14 +91,52 @@
                 <h2>Personal Projects</h2>
                 <div class="project-card-list">
                     <div class="project-card-item">
-                        <button><img id="snake-project-button" src="./assets/svg/chevron-up.svg" alt="chevron up"/></button>
-                        <img height="200" width="200" src="./assets/images/snake-game.png" alt="Snake Game"/>
                         <h3>Snake Game</h3>
+                        <div class="project-card-item-content">
+                            <div class="slideshow">
+                                <img id="snake-game-image-1" class="shown" height="200" width="200" src="./assets/images/snake-game-icon.jpg" alt="Snake Game"/>
+                                <img id="snake-game-image-2" class="hidden" height="200" width="200" src="./assets/images/snake-game-1.png" alt="Snake Game"/>
+                                <img id="snake-game-image-3" class="hidden" height="200" width="200" src="./assets/images/snake-game-2.png" alt="Snake Game"/>
+                                <div class="slideshow-buttons">
+                                    <button class="slideshow-button" onclick="changeSlide('snake-game', -1)">&#10094;</button>
+                                    <button class="slideshow-button" onclick="changeSlide('snake-game', 1)">&#10095;</butt>
+                                </div>
+                            </div>
+                            <p>I decided to create this game when I read that Bun 1.0 had been released. While I didn't have a specific purpose for it, my past experience with npm prompted me to explore the differences. This game is entirely built Vue, JS/TS, HTML, and CSS. It's just a whole bunch of divs tracked with a 2d array. Beyond that, it's a basic snake game where you navigate with the arrow keys, and when you collect food, the snake grows.</p>
+                        </div>
+                        <div class="technology-row">
+                            <p class="technology-item">JavaScript</p>
+                            <p class="technology-item">TypeScript</p>
+                            <p class="technology-item">Vue</p>
+                            <p class="technology-item">Bun</p>
+                            <p class="technology-item">HTML</p>
+                            <p class="technology-item">CSS</p>
+                        </div>
                     </div>
                     <div class="project-card-item">
-                        <button><img id="gym-project-button" src="./assets/svg/chevron-up.svg" alt="chevron up"/></button>
-                        <img height="200" width="200" src="./assets/images/gym-project.png" alt="Snake Game"/>
                         <h3>Gym Rat Lab</h3>
+                        <div class="project-card-item-content">
+                            <div class="slideshow">
+                                <img id="gym-project-image-1" class="shown" height="200" width="200" src="./assets/images/gym-project-icon.webp" alt="Gym Project"/>
+                                <img id="gym-project-image-2" class="hidden" height="200" width="200" src="./assets/images/gym-project-1.png" alt="Gym Project"/>
+                                <img id="gym-project-image-3" class="hidden" height="200" width="200" src="./assets/images/gym-project-2.png" alt="Gym Project"/>
+                                <img id="gym-project-image-4" class="hidden" height="200" width="200" src="./assets/images/gym-project-3.png" alt="Gym Project"/>
+                                <div class="slideshow-buttons">
+                                    <button class="slideshow-button" onclick="changeSlide('gym-project', -1)">&#10094;</button>
+                                    <button class="slideshow-button" onclick="changeSlide('gym-project', 1)">&#10095;</butt>
+                                </div>
+                            </div>
+                            <p>Gym Rat Lab was a school project done by me and 3 other classmates. It allows a user to complete workouts with exercises within. There are preset exercises and workout template a user can select or they can create their own.</p>
+                        </div>
+                        <div class="technology-row">
+                            <p class="technology-item">JavaScript</p>
+                            <p class="technology-item">TypeScript</p>
+                            <p class="technology-item">React</p>
+                            <p class="technology-item">npm</p>
+                            <p class="technology-item">Auth0</p>
+                            <p class="technology-item">HTML</p>
+                            <p class="technology-item">CSS</p>
+                        </div>
                     </div>
                 </div>
             </div>
