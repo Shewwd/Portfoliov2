@@ -227,6 +227,6 @@ main {
     }    
 
     .project-card-item-content {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 }
