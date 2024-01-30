@@ -6,6 +6,7 @@
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         <link rel="stylesheet" href="/styles.css">
         <script src="/index.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <title>Jacob Shawd's Portfolio</title>
     </head>
     <body>
@@ -156,6 +157,11 @@
             <div id="contact-card" class="card">
                 <h2>Contact Me</h2>
                 <div class="contact-card-content">
+                    <form action="?" method="POST">
+                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                        <br/>
+                        <input type="submit" value="Submit">
+                    </form>
                 </div>
             </div>
         </main>
