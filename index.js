@@ -9,7 +9,6 @@ function scrollToSection(section) {
     });
 }
 
-
 /* --------- SlideShow --------- */
 
 let snakeGameCurrentSlide = 1;
