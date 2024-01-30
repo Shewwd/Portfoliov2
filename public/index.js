@@ -1,3 +1,4 @@
+/* --------- Nav Scrolling --------- */
 function scrollToSection(section) {
     const targetElement = document.getElementById(`${section}-card`);
     const headerHeight = 80;
@@ -42,4 +43,14 @@ function changeSlide(slideName, incrament){
 
         gymProjectCurrentSlide = nextSlideIndex;
     }
+}
+
+/* --------- ReCaptcha --------- */
+
+function onloadCallback(){
+    fetch('/api-key').then(response => response.json()).then(data => {
+        grecaptcha.render('recaptcha_element', {
+            'sitekey' : data.googleSiteApiKey
+        });
+    });
 }
