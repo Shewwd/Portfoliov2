@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         <link rel="stylesheet" href="/styles.css">
-        <script src="/index.js"></script>
         <title>Jacob Shawd's Portfolio</title>
     </head>
     <body>
@@ -156,10 +155,29 @@
             <div id="contact-card" class="card">
                 <h2>Contact Me</h2>
                 <div class="contact-card-content">
-                    <div id="recaptcha_element"></div>
-                    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+                    <div id="contact-captcha" class="captcha">
+                        <div id="recaptcha_element"></div>
+                        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+                    </div>
+                    <form id="contact-form" class="contact-form hidden">
+                        <div>
+                            <label for="name"><h3>Name</h3></label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div>
+                            <label for="email"><h3>Email</h3></label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div>
+                            <label for="message"><h3>Message</h3></label>
+                            <textarea type="text" id="message" name="message" maxlength="280" rows="6"></textarea>
+                        </div>
+                        <button id="contact-form-submit" class="contact-form-submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </main>
+
+        <script src="/index.js"></script>
     </body>
 </html>

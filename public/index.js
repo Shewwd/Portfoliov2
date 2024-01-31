@@ -50,7 +50,26 @@ function changeSlide(slideName, incrament){
 function onloadCallback(){
     fetch('/api-key').then(response => response.json()).then(data => {
         grecaptcha.render('recaptcha_element', {
-            'sitekey' : data.googleSiteApiKey
+            'sitekey' : data.googleSiteApiKey,
+            'callback' : completeCallback,
         });
     });
 }
+
+function completeCallback(){
+    document.getElementById('contact-captcha').className = "captcha hidden";
+    document.getElementById('contact-form').className = "contact-form shown";
+}
+
+/* --------- Contact Submit --------- */
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    console.log('submit')
+    document.getElementById('contact-form-submit').disabled = true;
+
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const email = params.get('email');
+    const message = params.get('message');
+
+    event.preventDefault();
+});
