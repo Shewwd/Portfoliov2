@@ -10,13 +10,27 @@
     <body>
         <header>
             <nav class="nav-expanded">
-                <a onclick="scrollToSection('bio')"><h4>Bio</h4></a>
-                <a onclick="scrollToSection('technologies')"><h4>Technologies</h4></a>
-                <a onclick="scrollToSection('work')"><h4>Work</h4></a>
-                <a onclick="scrollToSection('projects')"><h4>Projects</h4></a>
-                <a onclick="scrollToSection('contact')"><h4>Contact</h4></a>
+                <a onclick="scrollToSection('bio', false)"><h4>Bio</h4></a>
+                <a onclick="scrollToSection('technologies', false)"><h4>Technologies</h4></a>
+                <a onclick="scrollToSection('work', false)"><h4>Work</h4></a>
+                <a onclick="scrollToSection('projects', false)"><h4>Projects</h4></a>
+                <a onclick="scrollToSection('contact', false)"><h4>Contact</h4></a>
                 <a href="https://github.com/Shewwd" target="_blank" rel="noopener noreferrer"><img src="/assets/svg/github-icon.svg" alt="GitHub icon" /></a>
                 <a href="https://www.linkedin.com/in/jacob-shawd-8575b7276/" target="_blank" rel="noopener noreferrer"><img src="/assets/svg/linkedin-icon.svg" alt="LinkedIn icon" /></a>
+            </nav>
+            <nav class="nav-mobile">
+                <div class="expand-nav-button">
+                    <img onclick="handleNavExpand()" width="25" height="25" src="/assets/svg/burger-menu.svg" alt="Nav Expand Button" />
+                </div>
+                <div id="mobile-nav-list" class="mobile-nav-list">
+                    <a onclick="scrollToSection('bio', true)"><h4>Bio</h4></a>
+                    <a onclick="scrollToSection('technologies', true)"><h4>Technologies</h4></a>
+                    <a onclick="scrollToSection('work', true)"><h4>Work</h4></a>
+                    <a onclick="scrollToSection('projects', true)"><h4>Projects</h4></a>
+                    <a onclick="scrollToSection('contact', true)"><h4>Contact</h4></a>
+                    <a href="https://github.com/Shewwd" target="_blank" rel="noopener noreferrer"><img src="/assets/svg/github-icon.svg" alt="GitHub icon" /></a>
+                    <a href="https://www.linkedin.com/in/jacob-shawd-8575b7276/" target="_blank" rel="noopener noreferrer"><img src="/assets/svg/linkedin-icon.svg" alt="LinkedIn icon" /></a>
+                </div>
             </nav>
         </header>
 
@@ -161,16 +175,16 @@
                     </div>
                     <form id="contact-form" class="contact-form hidden">
                         <div>
-                            <label for="name"><h3>Name</h3></label>
-                            <input type="text" id="name" name="name">
+                            <label for="contact-name"><h3>Name</h3></label>
+                            <input type="text" id="contact-name" name="name">
                         </div>
                         <div>
-                            <label for="email"><h3>Email</h3></label>
-                            <input type="text" id="email" name="email">
+                            <label for="contact-email"><h3>Email</h3></label>
+                            <input type="text" id="contact-email" name="email">
                         </div>
                         <div>
-                            <label for="message"><h3>Message</h3></label>
-                            <textarea type="text" id="message" name="message" maxlength="280" rows="6"></textarea>
+                            <label for="contact-message"><h3>Message</h3></label>
+                            <textarea type="text" id="contact-message" name="message" maxlength="280" rows="6"></textarea>
                         </div>
                         <button id="contact-form-submit" class="contact-form-submit">Submit</button>
                     </form>
